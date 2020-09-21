@@ -7,3 +7,4 @@ Werkzeug==0.15.5
 dnspython>=1.16.0
 keras>=2.4.3
 gevent>=20.6.2
+opencv-python>=4.4.0.42
