@@ -13,7 +13,6 @@ age_classes=['0-5', '12-17', '18-30', '30-50', '50+', '6-11']
 
 def model_predict(img_path, age_model,gender_model):
     img=cv2.imread(img_path)
-    print(img)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
@@ -51,7 +50,6 @@ def predict():
 
         
         age,gender=model_predict(file_path,age_model,gender_model)
-        print(file_path)
 
         return render_template('pred.html',age=age,gender=gender,file_name=str(f.filename))
 	
